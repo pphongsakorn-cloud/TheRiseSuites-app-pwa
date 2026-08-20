@@ -1,25 +1,371 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>The Rise Suites App</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#f7f1e5">
+
+  <title>The Rise Suites</title>
 
   <link rel="manifest" href="manifest.json">
 
   <link rel="apple-touch-icon" href="icon-192.png">
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="The Rise Suites">
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background:
+        linear-gradient(
+          180deg,
+          #fffdf8 0%,
+          #f7f0e2 100%
+        );
+
+      color: #3d3428;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 24px;
+    }
+
+
+    /* Main Card */
+
+    .app {
+      width: 100%;
+      max-width: 430px;
+
+      text-align: center;
+
+      padding: 42px 28px 30px;
+
+      background: rgba(255,255,255,0.72);
+
+      border: 1px solid rgba(190,150,70,0.20);
+
+      border-radius: 28px;
+
+      box-shadow:
+        0 18px 50px rgba(120,90,40,0.10);
+
+      backdrop-filter: blur(8px);
+    }
+
+
+    /* Logo */
+
+    .logo {
+      width: 105px;
+      height: 105px;
+
+      object-fit: contain;
+
+      border-radius: 24px;
+
+      margin-bottom: 22px;
+
+      box-shadow:
+        0 8px 22px rgba(130,100,40,0.12);
+    }
+
+
+    /* Hotel name */
+
+    .hotel-name {
+      font-family: Georgia, serif;
+
+      font-size: 31px;
+
+      font-weight: 500;
+
+      letter-spacing: 0.3px;
+
+      color: #9a6b20;
+
+      margin-bottom: 5px;
+    }
+
+
+    .location {
+      font-size: 12px;
+
+      letter-spacing: 4px;
+
+      color: #a98a5a;
+
+      margin-bottom: 38px;
+    }
+
+
+    /* Welcome */
+
+    .welcome {
+      font-size: 16px;
+
+      color: #6f6252;
+
+      margin-bottom: 9px;
+    }
+
+
+    .system-name {
+      font-family: Georgia, serif;
+
+      font-size: 23px;
+
+      line-height: 1.35;
+
+      color: #3d3428;
+
+      margin-bottom: 7px;
+    }
+
+
+    .thai-name {
+      font-size: 14px;
+
+      color: #9a8060;
+
+      margin-bottom: 30px;
+    }
+
+
+    /* Divider */
+
+    .divider {
+      width: 55px;
+      height: 1px;
+
+      background: #c49a4c;
+
+      margin: 0 auto 30px;
+    }
+
+
+    /* Login Button */
+
+    .login-button {
+
+      width: 100%;
+
+      padding: 16px 20px;
+
+      border: 1px solid #c29442;
+
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          180deg,
+          #e8c77f 0%,
+          #d6aa52 100%
+        );
+
+      color: #3d3020;
+
+      font-size: 16px;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 7px 18px rgba(170,125,45,0.20);
+
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+    }
+
+
+    .login-button:active {
+
+      transform: scale(0.98);
+
+      box-shadow:
+        0 3px 10px rgba(170,125,45,0.15);
+    }
+
+
+    /* Loading */
+
+    .loading {
+
+      display: none;
+
+      margin-top: 14px;
+
+      font-size: 13px;
+
+      color: #9a8567;
+    }
+
+
+    /* Footer */
+
+    .footer {
+
+      margin-top: 35px;
+
+      padding-top: 20px;
+
+      border-top:
+        1px solid rgba(180,145,80,0.18);
+
+      font-size: 12px;
+
+      color: #a99982;
+
+      line-height: 1.7;
+    }
+
+
+    /* Small screens */
+
+    @media (max-width: 380px) {
+
+      .app {
+        padding: 35px 22px 25px;
+      }
+
+      .hotel-name {
+        font-size: 27px;
+      }
+
+      .system-name {
+        font-size: 20px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
-    <script>
-        window.location.href = "https://script.google.com/macros/s/AKfycbwrbhAeX0YpNLozJ1JFLdxLetTV9p64eCHSd-XkEhunbQQBTLdreq-auYZ_-IvqsxnxmQ/exec";
-    </script>
+
+  <main class="app">
+
+
+    <!-- Logo เดิมของ The Rise Suites -->
+
+    <img
+      src="icon-192.png"
+      alt="The Rise Suites"
+      class="logo"
+    >
+
+
+    <!-- Hotel -->
+
+    <div class="hotel-name">
+      The Rise Suites
+    </div>
+
+    <div class="location">
+      CHIANG MAI
+    </div>
+
+
+    <!-- Welcome -->
+
+    <div class="welcome">
+      Welcome to The Rise Suites
+    </div>
+
+
+    <div class="system-name">
+      Hotel Meeting Room<br>
+      Booking System
+    </div>
+
+
+    <div class="thai-name">
+      ระบบจองห้องประชุมโรงแรม
+    </div>
+
+
+    <div class="divider"></div>
+
+
+    <!-- Login -->
+
+    <button
+      class="login-button"
+      onclick="openApp()">
+
+      🔐 &nbsp; Sign in / เข้าสู่ระบบ
+
+    </button>
+
+
+    <div
+      id="loading"
+      class="loading">
+
+      กำลังเปิดระบบ...
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <div class="footer">
+
+      The Rise Suites App<br>
+
+      Version 1.0
+
+    </div>
+
+
+  </main>
+
+
+
+  <script>
+
+    function openApp() {
+
+      document.getElementById("loading").style.display = "block";
+
+      const appUrl =
+        "https://script.google.com/macros/s/AKfycbwrbhAeX0YpNLozJ1JFLdxLetTV9p64eCHSd-XkEhunbQQBTLdreq-auYZ_-IvqsxnxmQ/exec";
+
+
+      setTimeout(function() {
+
+        window.location.href = appUrl;
+
+      }, 250);
+
+    }
+
+  </script>
+
 
 </body>
+
 </html>
