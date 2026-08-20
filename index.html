@@ -9,7 +9,7 @@
 
   <meta name="theme-color" content="#f7f1e5">
 
-  <title>The Rise Suites</title>
+  <title>The Rise Suites | Meeting Room Booking</title>
 
   <link rel="manifest" href="manifest.json">
 
@@ -33,10 +33,16 @@
         sans-serif;
 
       background:
+        radial-gradient(
+          circle at 20% 15%,
+          rgba(255,255,255,0.95),
+          transparent 35%
+        ),
+
         linear-gradient(
           180deg,
           #fffdf8 0%,
-          #f7f0e2 100%
+          #f6eee0 100%
         );
 
       color: #3d3428;
@@ -46,103 +52,98 @@
       align-items: center;
 
       padding: 24px;
+
+      overflow-x: hidden;
     }
 
 
     /* Main Card */
 
     .app {
+
       width: 100%;
-      max-width: 430px;
+
+      max-width: 520px;
 
       text-align: center;
 
-      padding: 42px 28px 30px;
+      padding: 42px 34px 30px;
 
-      background: rgba(255,255,255,0.72);
+      background:
+        rgba(255,255,255,0.84);
 
-      border: 1px solid rgba(190,150,70,0.20);
+      border:
+        1px solid rgba(190,150,70,0.22);
 
-      border-radius: 28px;
+      border-radius: 30px;
 
       box-shadow:
-        0 18px 50px rgba(120,90,40,0.10);
+        0 22px 60px rgba(105,78,38,0.12),
+        inset 0 1px 0 rgba(255,255,255,0.8);
 
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
     }
 
 
-    /* Logo */
+    /* Official Hotel Logo */
 
     .logo {
-      width: 105px;
-      height: 105px;
 
-      object-fit: contain;
+      display: block;
 
-      border-radius: 24px;
+      width: 100%;
 
-      margin-bottom: 22px;
+      max-width: 390px;
+
+      height: auto;
+
+      margin: 0 auto 34px;
+
+      border-radius: 8px;
 
       box-shadow:
-        0 8px 22px rgba(130,100,40,0.12);
-    }
-
-
-    /* Hotel name */
-
-    .hotel-name {
-      font-family: Georgia, serif;
-
-      font-size: 31px;
-
-      font-weight: 500;
-
-      letter-spacing: 0.3px;
-
-      color: #9a6b20;
-
-      margin-bottom: 5px;
-    }
-
-
-    .location {
-      font-size: 12px;
-
-      letter-spacing: 4px;
-
-      color: #a98a5a;
-
-      margin-bottom: 38px;
+        0 8px 24px rgba(130,100,40,0.08);
     }
 
 
     /* Welcome */
 
     .welcome {
-      font-size: 16px;
 
-      color: #6f6252;
+      font-size: 19px;
 
-      margin-bottom: 9px;
+      color: #756754;
+
+      margin-bottom: 12px;
     }
 
 
+    /* System Name */
+
     .system-name {
-      font-family: Georgia, serif;
 
-      font-size: 23px;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-      line-height: 1.35;
+      font-size: 34px;
+
+      line-height: 1.25;
+
+      font-weight: 500;
 
       color: #3d3428;
 
-      margin-bottom: 7px;
+      margin-bottom: 12px;
     }
 
 
+    /* Thai Name */
+
     .thai-name {
-      font-size: 14px;
+
+      font-size: 16px;
 
       color: #9a8060;
 
@@ -153,12 +154,22 @@
     /* Divider */
 
     .divider {
-      width: 55px;
-      height: 1px;
 
-      background: #c49a4c;
+      width: 62px;
 
-      margin: 0 auto 30px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #c49a4c,
+          #e0bd78
+        );
+
+      margin:
+        0 auto 30px;
+
+      border-radius: 10px;
     }
 
 
@@ -168,42 +179,54 @@
 
       width: 100%;
 
-      padding: 16px 20px;
+      padding: 18px 20px;
 
-      border: 1px solid #c29442;
+      border:
+        1px solid #c29442;
 
-      border-radius: 14px;
+      border-radius: 16px;
 
       background:
         linear-gradient(
           180deg,
-          #e8c77f 0%,
-          #d6aa52 100%
+          #edcc82 0%,
+          #d8ad58 100%
         );
 
       color: #3d3020;
 
-      font-size: 16px;
+      font-size: 19px;
 
-      font-weight: 600;
+      font-weight: 650;
 
       cursor: pointer;
 
       box-shadow:
-        0 7px 18px rgba(170,125,45,0.20);
+        0 9px 22px rgba(170,125,45,0.22),
+        inset 0 1px 0 rgba(255,255,255,0.45);
 
       transition:
         transform 0.15s ease,
-        box-shadow 0.15s ease;
+        box-shadow 0.15s ease,
+        filter 0.15s ease;
+    }
+
+
+    .login-button:hover {
+
+      filter: brightness(1.03);
+
+      box-shadow:
+        0 11px 26px rgba(170,125,45,0.26);
     }
 
 
     .login-button:active {
 
-      transform: scale(0.98);
+      transform: scale(0.985);
 
       box-shadow:
-        0 3px 10px rgba(170,125,45,0.15);
+        0 4px 12px rgba(170,125,45,0.16);
     }
 
 
@@ -225,12 +248,12 @@
 
     .footer {
 
-      margin-top: 35px;
+      margin-top: 30px;
 
-      padding-top: 20px;
+      padding-top: 18px;
 
       border-top:
-        1px solid rgba(180,145,80,0.18);
+        1px solid rgba(180,145,80,0.16);
 
       font-size: 12px;
 
@@ -240,22 +263,63 @@
     }
 
 
-    /* Small screens */
+    /* Mobile */
 
-    @media (max-width: 380px) {
+    @media (max-width: 480px) {
+
+      body {
+
+        padding: 14px;
+      }
+
 
       .app {
-        padding: 35px 22px 25px;
+
+        padding:
+          30px
+          22px
+          24px;
+
+        border-radius: 26px;
       }
 
-      .hotel-name {
-        font-size: 27px;
+
+      .logo {
+
+        width: 100%;
+
+        margin-bottom: 28px;
       }
+
 
       .system-name {
-        font-size: 20px;
+
+        font-size: 28px;
       }
 
+
+      .login-button {
+
+        padding: 17px 14px;
+      }
+    }
+
+
+    @media (max-width: 360px) {
+
+      .app {
+
+        padding:
+          26px
+          18px
+          22px;
+      }
+
+
+      .system-name {
+
+        font-size: 24px;
+      }
     }
 
   </style>
@@ -269,43 +333,44 @@
   <main class="app">
 
 
-    <!-- Logo เดิมของ The Rise Suites -->
+    <!-- Official The Rise Suites Logo -->
 
     <img
-      src="icon-192.png"
+      src="logo.png"
       alt="The Rise Suites"
       class="logo"
     >
 
 
-    <!-- Hotel -->
-
-    <div class="hotel-name">
-      The Rise Suites
-    </div>
-
-    <div class="location">
-      CHIANG MAI
-    </div>
-
-
     <!-- Welcome -->
 
     <div class="welcome">
-      Welcome to The Rise Suites
+
+      Welcome to The Rise Suites Hotel
+
     </div>
 
+
+    <!-- System -->
 
     <div class="system-name">
+
       Hotel Meeting Room<br>
       Booking System
+
     </div>
 
+
+    <!-- Thai -->
 
     <div class="thai-name">
+
       ระบบจองห้องประชุมโรงแรม
+
     </div>
 
+
+    <!-- Divider -->
 
     <div class="divider"></div>
 
@@ -344,12 +409,13 @@
   </main>
 
 
-
   <script>
 
     function openApp() {
 
-      document.getElementById("loading").style.display = "block";
+      document.getElementById("loading").style.display =
+        "block";
+
 
       const appUrl =
         "https://script.google.com/macros/s/AKfycbwrbhAeX0YpNLozJ1JFLdxLetTV9p64eCHSd-XkEhunbQQBTLdreq-auYZ_-IvqsxnxmQ/exec";
